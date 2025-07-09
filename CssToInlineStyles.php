@@ -9,11 +9,14 @@ use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 // HTMLをファイルから読み込む
 $html = file_get_contents(__DIR__ . '/sample.html');
 
+// sample.cssを読み込む
+$css = file_get_contents(__DIR__ . '/sample.css');
+
 // CssToInlineStylesのインスタンスを作成
 $cssToInlineStyles = new CssToInlineStyles();
 
-// CSSをインライン化
-$inlinedHtml = $cssToInlineStyles->convert($html);
+// CSSをインライン化（第2引数にCSSを渡す）
+$inlinedHtml = $cssToInlineStyles->convert($html, $css);
 
 // 結果をファイルに保存
 $outputDir = __DIR__ . '/results';

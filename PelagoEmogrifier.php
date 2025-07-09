@@ -9,8 +9,11 @@ use Pelago\Emogrifier\CssInliner;
 // HTMLをファイルから読み込む
 $html = file_get_contents(__DIR__ . '/sample.html');
 
-// CSSをインライン化
-$inlinedHtml = CssInliner::fromHtml($html)->inlineCss()->render();
+// sample.cssを読み込む
+$css = file_get_contents(__DIR__ . '/sample.css');
+
+// CSSをインライン化（CSSを明示的に渡す）
+$inlinedHtml = CssInliner::fromHtml($html)->inlineCss($css)->render();
 
 // 結果をファイルに保存
 $outputDir = __DIR__ . '/results';
