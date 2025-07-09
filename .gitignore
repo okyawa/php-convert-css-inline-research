@@ -1,9 +1,6 @@
 # Composer dependencies
 /vendor/
 
-# Results
-/results/
-
 # Environment variables
 .env
 .env.local
