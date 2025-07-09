@@ -1,0 +1,20 @@
+# Composer dependencies
+/vendor/
+
+# Results
+/results/
+
+# Environment variables
+.env
+.env.local
+.env.test
+.env.dist
+
+# Composer
+composer.lock
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
